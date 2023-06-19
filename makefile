@@ -3,11 +3,11 @@
 CC=g++
 CXXFLAGS=-Wall -std=c++17
 EXE=main
-OBJECTS=caeser.o
+OBJECTS=ciphers.o
 
 # Recipes for targets
-caeser.o: caeser.cpp caeser.h pch.h
-	$(CC) $(CXXFLAGS) -c caeser.cpp
+caeser.o: ciphers.cpp ciphers.h pch.h
+	$(CC) $(CXXFLAGS) -c cipher.cpp
 
 $(EXE): $(OBJECTS) $(EXE).cpp
 	$(CC) $(CXXFLAGS) -o $(EXE) $(OBJECTS)  $(EXE).cpp
